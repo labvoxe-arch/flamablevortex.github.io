@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="tabs">
+    <button class="tab active" data-tab="about">About Me</button>
+    <button class="tab" data-tab="cats">Cats</button>
+    <button class="tab" data-tab="silly-game">Silly Game</button>
+  </nav>
+
+  <main>
+    <section id="about" class="tab-content active">
+      <div class="about-container">
+        <div class="hero">
+          <h1>Hi, I'm <span class="highlight">Flamablevortex</span></h1>
+          <p class="tagline">Developer &middot; Creator &middot; Minecraft Enthusiast</p>
+        </div>
+
+        <div class="about-section">
+          <h2>About Me</h2>
+          <p>Hey, I'm Flamablevortex! I just started developing this year and I'm learning HTML, Java, and Python. My favorite game is Minecraft and I love blue cats. Find me on Discord: <span class="highlight">flamablevortex</span></p>
+        </div>
+
+        <div class="about-section">
+          <h2>Skills</h2>
+          <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="project-card">
+              <h3>Learning Java</h3>
+              <p>Im Learning to make plugins for minecraft servers!</p>
+            </div>
+            <div class="project-card">
+              <h3>Learning python</h3>
+              <p>currently im learning python because its easier than the rest</p>
+            </div>
+            <div class="project-card">
+              <h3>Learning HTML</h3>
+              <p>im learning HTML because i want to become a web developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2>Contact</h2>
+          <p>Feel free to reach out! Find me on Discord: <span class="highlight">flamablevortex</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cats" class="tab-content">
+      <div class="cats-container" id="cats-grid">
+        <!-- Cat images loaded dynamically -->
+      </div>
+      <div class="scroll-sentinel" id="scroll-sentinel"></div>
+      <div class="loading" id="loading">Loading more cats...</div>
+    </section>
+    <section id="silly-game" class="tab-content">
+      <div class="game-wrapper">
+        <h2 class="game-title">Blue Cat Steak Chase</h2>
+        <p class="game-subtitle">Use arrow keys or WASD to move the blue cat. Eat the steaks!</p>
+        <div class="game-stats">
+          <span id="game-score">Score: 0</span>
+          <span id="game-high-score">Best: 0</span>
+        </div>
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+        <div class="game-controls-mobile">
+          <button class="game-btn" id="btn-up">&#9650;</button>
+          <div class="game-btn-row">
+            <button class="game-btn" id="btn-left">&#9664;</button>
+            <button class="game-btn" id="btn-down">&#9660;</button>
+            <button class="game-btn" id="btn-right">&#9654;</button>
+          </div>
+        </div>
+        <p class="game-hint">Press Space or tap canvas to start / restart</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
